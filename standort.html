@@ -83,13 +83,55 @@
             </div>
           </div>
           <div class="map-frame reveal">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25142.39322786305!2d6.365775868192126!3d51.25811965806232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8a97d88344d01%3A0xa584ad3fc61050b5!2sViersen!5e1!3m2!1sde!2sde!4v1787242374630!5m2!1sde!2sde"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Standort von Top-Noten Nachhilfe in Viersen"
-              aria-label="Kartenausschnitt Standort Viersen">
-            </iframe>
+            <div class="map-frame map-consent reveal" data-map-consent>
+  <div class="map-consent__content">
+    <div class="map-consent__icon" aria-hidden="true">
+      <svg
+        viewBox="0 0 24 24"
+        width="42"
+        height="42"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 21s7-6.4 7-12A7 7 0 0 0 5 9c0 5.6 7 12 7 12Z"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <circle
+          cx="12"
+          cy="9"
+          r="2.4"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+      </svg>
+    </div>
+
+    <h3>Google Maps laden</h3>
+
+    <p>
+      Wenn du die Karte lädst, werden Daten an Google übertragen.
+      Weitere Informationen findest du in unserer
+      <a href="datenschutz.html">Datenschutzerklärung</a>.
+    </p>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-load-map
+    >
+      Google Maps laden
+    </button>
+  </div>
+
+  <noscript>
+    <p style="padding:20px;">
+      Bitte aktiviere JavaScript, um Google Maps anzuzeigen.
+    </p>
+  </noscript>
+</div>
           </div>
         </div>
       </div>
