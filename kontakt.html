@@ -18,6 +18,20 @@
   <meta name="twitter:description" content="Nimm Kontakt zu Top-Noten Nachhilfe in Viersen auf – per Formular oder E-Mail. Wir melden uns zeitnah zurück." />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .btn-whatsapp {
+      background: #25D366;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-whatsapp:hover,
+    .btn-whatsapp:focus-visible {
+      background: #1EBE5A;
+      color: #FFFFFF;
+    }
+  </style>
   <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body class="">
@@ -39,6 +53,19 @@
         </ul>
       </nav>
       <div style="display:flex; align-items:center; gap:10px;">
+        <a
+          class="btn btn-whatsapp header-cta"
+          href="https://wa.me/491788745639"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.3.9 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.2-1.3 0-.1-.2-.2-.4-.3Z"/>
+            <path d="M12 2C6.5 2 2 6.4 2 11.9c0 1.9.5 3.6 1.4 5.1L2 22l5.2-1.4c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.4 10-9.9C22 6.4 17.5 2 12 2Zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.1 14.8 3.6 13.4 3.6 12 3.6 7.4 7.4 3.6 12 3.6S20.4 7.4 20.4 12 16.6 20 12 20Z"/>
+          </svg>
+          WhatsApp
+        </a>
+
         <a class="btn btn-primary header-cta" href="kontakt.html">Jetzt anfragen</a>
         <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -69,19 +96,61 @@
     </section><section class="section">
       <div class="container">
         <div class="contact-layout">
-          <div class="contact-info-card reveal">
-            <div class="contact-info-row">
-              <span class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><rect x="3" y="5.5" width="18" height="13" rx="2.2" stroke="currentColor" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <div><strong>E-Mail</strong><a href="mailto:info@top-noten-nachhilfe.de">info@top-noten-nachhilfe.de</a></div>
+          <div style="display:flex; flex-direction:column; gap:24px;">
+
+            <div class="contact-info-card reveal">
+              <div class="contact-info-row">
+                <span class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><rect x="3" y="5.5" width="18" height="13" rx="2.2" stroke="currentColor" stroke-width="1.7"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <div><strong>E-Mail</strong><a href="mailto:info@top-noten-nachhilfe.de">info@top-noten-nachhilfe.de</a></div>
+              </div>
+              <div class="contact-info-row">
+                <span class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M12 21s7-6.4 7-12A7 7 0 0 0 5 9c0 5.6 7 12 7 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg></span>
+                <div><strong>Standort</strong><br/>41747 Viersen</div>
+              </div>
+              <div class="contact-info-row">
+                <span class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17" stroke="currentColor" stroke-width="1.8"/><path d="M8 3v3.5M16 3v3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                <div><strong>Antwortzeit</strong>Wir melden uns in der Regel zeitnah zurück.</div>
+              </div>
             </div>
-            <div class="contact-info-row">
-              <span class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M12 21s7-6.4 7-12A7 7 0 0 0 5 9c0 5.6 7 12 7 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg></span>
-              <div><strong>Standort</strong><br/>41747 Viersen</div>
+
+            <div
+              class="contact-info-card reveal"
+              style="
+                background:#25D366;
+                color:#FFFFFF;
+                display:flex;
+                flex-direction:column;
+                align-items:flex-start;
+                gap:14px;
+                padding:32px;
+              "
+            >
+              <span class="icon-wrap" style="background:rgba(255,255,255,0.18); color:#FFFFFF;">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+                  <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.3.9 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.2-1.3 0-.1-.2-.2-.4-.3Z"/>
+                  <path d="M12 2C6.5 2 2 6.4 2 11.9c0 1.9.5 3.6 1.4 5.1L2 22l5.2-1.4c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.4 10-9.9C22 6.4 17.5 2 12 2Zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.1 14.8 3.6 13.4 3.6 12 3.6 7.4 7.4 3.6 12 3.6S20.4 7.4 20.4 12 16.6 20 12 20Z"/>
+                </svg>
+              </span>
+
+              <div>
+                <h3 style="color:#FFFFFF; margin-bottom:6px;">Lieber direkt schreiben?</h3>
+                <p style="color:#FFFFFF; opacity:0.95;">
+                  Am schnellsten erreichst du uns über WhatsApp – schreib
+                  uns einfach kurz dein Anliegen, wir antworten zeitnah.
+                </p>
+              </div>
+
+              <a
+                class="btn"
+                href="https://wa.me/491788745639"
+                target="_blank"
+                rel="noopener"
+                style="background:#FFFFFF; color:#128C4A; font-weight:700;"
+              >
+                Chat auf WhatsApp starten
+              </a>
             </div>
-            <div class="contact-info-row">
-              <span class="icon-wrap"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17" stroke="currentColor" stroke-width="1.8"/><path d="M8 3v3.5M16 3v3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-              <div><strong>Antwortzeit</strong>Wir melden uns in der Regel zeitnah zurück.</div>
-            </div>
+
           </div>
 
           <form class="card reveal" data-contact-form novalidate>
