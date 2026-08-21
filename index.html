@@ -162,6 +162,23 @@
             unseren <strong>Schulstart-Check kostenlos sichern.</strong>
           </p>
 
+          <p
+            id="countdown"
+            style="
+              display:inline-flex;
+              align-items:center;
+              gap:8px;
+              margin:4px auto 0;
+              padding:8px 18px;
+              border-radius:999px;
+              background:rgba(242,153,74,0.12);
+              color:var(--orange);
+              font-weight:700;
+              font-size:0.95rem;
+            "
+            aria-live="polite"
+          ></p>
+
           <div class="cta-band__actions">
             <a class="btn btn-primary" href="kontakt.html">
               Schulstart-Check sichern
@@ -180,6 +197,25 @@
         </div>
       </div>
     </section>
+
+    <script>
+      (function () {
+        var el = document.getElementById('countdown');
+        if (!el) return;
+        var deadline = new Date('2026-09-15T23:59:59+02:00');
+        var now = new Date();
+        var diffMs = deadline - now;
+        var days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+        if (days > 1) {
+          el.textContent = 'Noch ' + days + ' Tage bis zum Schulstart-Check';
+        } else if (days === 1) {
+          el.textContent = 'Nur noch heute: Schulstart-Check sichern';
+        } else {
+          el.style.display = 'none';
+        }
+      })();
+    </script>
 
 
     <!-- HERO -->
@@ -465,6 +501,43 @@
           </li>
 
         </ul>
+      </div>
+    </section>
+
+
+    <!-- KENNZAHLEN -->
+    <section class="section" style="padding-top:28px; padding-bottom:28px;">
+      <div class="container">
+        <div
+          class="grid grid--3"
+          style="text-align:center; max-width:900px; margin-inline:auto;"
+        >
+
+          <div class="reveal">
+            <div style="font-size:2.2rem; font-weight:800; color:var(--navy);">
+              <!-- TODO: reale Zahl eintragen -->
+              120+
+            </div>
+            <p style="margin-top:4px;">betreute Schüler:innen</p>
+          </div>
+
+          <div class="reveal">
+            <div style="font-size:2.2rem; font-weight:800; color:var(--navy);">
+              <!-- TODO: reales Gründungsjahr eintragen -->
+              seit 2019
+            </div>
+            <p style="margin-top:4px;">in Viersen aktiv</p>
+          </div>
+
+          <div class="reveal">
+            <div style="font-size:2.2rem; font-weight:800; color:var(--navy);">
+              <!-- TODO: reale Zahl eintragen -->
+              5 Fächer
+            </div>
+            <p style="margin-top:4px;">von Mathe bis Latein</p>
+          </div>
+
+        </div>
       </div>
     </section>
 
@@ -827,8 +900,72 @@
     </section>
 
 
-    <!-- SO FUNKTIONIERT ES -->
+    <!-- KUNDENSTIMMEN -->
     <section class="section section--tint">
+      <div class="container">
+
+        <div class="section-head section-head--center">
+          <span class="eyebrow">
+            Stimmen von Eltern
+          </span>
+
+          <h2>
+            Was andere Familien berichten.
+          </h2>
+
+          <p>
+            <!-- TODO: durch echte, freigegebene Zitate ersetzen -->
+            Ein kleiner Einblick, wie Eltern und Schüler:innen die
+            Zusammenarbeit mit uns erleben.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+
+          <div class="card reveal">
+            <p style="font-style:italic;">
+              „Unser Sohn hat endlich wieder Spaß an Mathe – die
+              Erklärungen sind geduldig und auf ihn abgestimmt.“
+            </p>
+            <p style="margin-top:14px; font-weight:700; color:var(--navy);">
+              — Familie M., Viersen
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <p style="font-style:italic;">
+              „Sehr zuverlässig und unkompliziert in der
+              Terminabsprache. Wir fühlen uns gut informiert.“
+            </p>
+            <p style="margin-top:14px; font-weight:700; color:var(--navy);">
+              — Familie K., Viersen
+            </p>
+          </div>
+
+          <div class="card reveal">
+            <p style="font-style:italic;">
+              „Innerhalb weniger Wochen hat sich das Textverständnis
+              in Englisch deutlich verbessert.“
+            </p>
+            <p style="margin-top:14px; font-weight:700; color:var(--navy);">
+              — Familie S., Viersen
+            </p>
+          </div>
+
+        </div>
+
+        <p class="text-center" style="margin-top:20px; font-size:0.9rem; color:var(--muted, #667);">
+          <!-- TODO: Hinweis entfernen, sobald echte Stimmen eingepflegt sind -->
+          Platzhalter-Zitate – bitte durch echte Rückmeldungen (mit
+          Einverständnis) ersetzen.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- SO FUNKTIONIERT ES -->
+    <section class="section">
       <div class="container">
 
         <div class="section-head">
@@ -962,8 +1099,71 @@
     </section>
 
 
-    <!-- STANDORTE / FLEXIBILITÄT -->
+    <!-- FAQ -->
     <section class="section section--tint">
+      <div class="container">
+
+        <div class="section-head section-head--center">
+          <span class="eyebrow">
+            Häufige Fragen
+          </span>
+
+          <h2>
+            Kurz beantwortet.
+          </h2>
+        </div>
+
+        <div style="max-width:760px; margin-inline:auto; display:flex; flex-direction:column; gap:12px;">
+
+          <details class="card reveal" style="cursor:pointer;">
+            <summary style="font-weight:700; color:var(--navy); list-style:none;">
+              Wie läuft die erste Probestunde ab?
+            </summary>
+            <p style="margin-top:12px;">
+              Wir klären zunächst kurz den Bedarf und die Ziele Ihres
+              Kindes und vereinbaren dann einen ersten Termin – vor Ort,
+              als Hausbesuch oder online, ganz wie es passt.
+            </p>
+          </details>
+
+          <details class="card reveal" style="cursor:pointer;">
+            <summary style="font-weight:700; color:var(--navy); list-style:none;">
+              Gibt es eine Mindestlaufzeit oder Vertragsbindung?
+            </summary>
+            <p style="margin-top:12px;">
+              Nein. Die Nachhilfe kann flexibel gebucht und bei Bedarf
+              jederzeit angepasst oder beendet werden.
+            </p>
+          </details>
+
+          <details class="card reveal" style="cursor:pointer;">
+            <summary style="font-weight:700; color:var(--navy); list-style:none;">
+              Wie schnell bekommen wir einen Termin?
+            </summary>
+            <p style="margin-top:12px;">
+              In der Regel können wir innerhalb weniger Tage nach der
+              ersten Kontaktaufnahme einen passenden Termin anbieten.
+            </p>
+          </details>
+
+          <details class="card reveal" style="cursor:pointer;">
+            <summary style="font-weight:700; color:var(--navy); list-style:none;">
+              Was passiert, wenn eine Stunde ausfallen muss?
+            </summary>
+            <p style="margin-top:12px;">
+              Kein Problem – bitte einfach frühzeitig Bescheid geben,
+              dann finden wir gemeinsam einen Ersatztermin.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- STANDORTE / FLEXIBILITÄT -->
+    <section class="section">
       <div class="container">
 
         <div class="section-head section-head--center">
@@ -1071,14 +1271,6 @@
       </div>
     </section>
 
-
-    <!-- STANDORT -->
-
-
-        </div>
-
-      </div>
-    </section>
 
   </main>
 
