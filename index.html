@@ -208,9 +208,9 @@
         var days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 
         if (days > 1) {
-          el.textContent = 'Noch ' + days + ' Tage bis zum Schulstart-Check';
+          el.textContent = 'Noch ' + days + ' Tage bis Aktionsende';
         } else if (days === 1) {
-          el.textContent = 'Nur noch heute: Schulstart-Check sichern';
+          el.textContent = 'Nur noch heute: Aktion sichern';
         } else {
           el.style.display = 'none';
         }
@@ -501,43 +501,6 @@
           </li>
 
         </ul>
-      </div>
-    </section>
-
-
-    <!-- KENNZAHLEN -->
-    <section class="section" style="padding-top:28px; padding-bottom:28px;">
-      <div class="container">
-        <div
-          class="grid grid--3"
-          style="text-align:center; max-width:900px; margin-inline:auto;"
-        >
-
-          <div class="reveal">
-            <div style="font-size:2.2rem; font-weight:800; color:var(--navy);">
-              <!-- TODO: reale Zahl eintragen -->
-              120+
-            </div>
-            <p style="margin-top:4px;">betreute Schüler:innen</p>
-          </div>
-
-          <div class="reveal">
-            <div style="font-size:2.2rem; font-weight:800; color:var(--navy);">
-              <!-- TODO: reales Gründungsjahr eintragen -->
-              seit 2019
-            </div>
-            <p style="margin-top:4px;">in Viersen aktiv</p>
-          </div>
-
-          <div class="reveal">
-            <div style="font-size:2.2rem; font-weight:800; color:var(--navy);">
-              <!-- TODO: reale Zahl eintragen -->
-              5 Fächer
-            </div>
-            <p style="margin-top:4px;">von Mathe bis Latein</p>
-          </div>
-
-        </div>
       </div>
     </section>
 
@@ -900,72 +863,8 @@
     </section>
 
 
-    <!-- KUNDENSTIMMEN -->
-    <section class="section section--tint">
-      <div class="container">
-
-        <div class="section-head section-head--center">
-          <span class="eyebrow">
-            Stimmen von Eltern
-          </span>
-
-          <h2>
-            Was andere Familien berichten.
-          </h2>
-
-          <p>
-            <!-- TODO: durch echte, freigegebene Zitate ersetzen -->
-            Ein kleiner Einblick, wie Eltern und Schüler:innen die
-            Zusammenarbeit mit uns erleben.
-          </p>
-        </div>
-
-        <div class="grid grid--3">
-
-          <div class="card reveal">
-            <p style="font-style:italic;">
-              „Unser Sohn hat endlich wieder Spaß an Mathe – die
-              Erklärungen sind geduldig und auf ihn abgestimmt.“
-            </p>
-            <p style="margin-top:14px; font-weight:700; color:var(--navy);">
-              — Familie M., Viersen
-            </p>
-          </div>
-
-          <div class="card reveal">
-            <p style="font-style:italic;">
-              „Sehr zuverlässig und unkompliziert in der
-              Terminabsprache. Wir fühlen uns gut informiert.“
-            </p>
-            <p style="margin-top:14px; font-weight:700; color:var(--navy);">
-              — Familie K., Viersen
-            </p>
-          </div>
-
-          <div class="card reveal">
-            <p style="font-style:italic;">
-              „Innerhalb weniger Wochen hat sich das Textverständnis
-              in Englisch deutlich verbessert.“
-            </p>
-            <p style="margin-top:14px; font-weight:700; color:var(--navy);">
-              — Familie S., Viersen
-            </p>
-          </div>
-
-        </div>
-
-        <p class="text-center" style="margin-top:20px; font-size:0.9rem; color:var(--muted, #667);">
-          <!-- TODO: Hinweis entfernen, sobald echte Stimmen eingepflegt sind -->
-          Platzhalter-Zitate – bitte durch echte Rückmeldungen (mit
-          Einverständnis) ersetzen.
-        </p>
-
-      </div>
-    </section>
-
-
     <!-- SO FUNKTIONIERT ES -->
-    <section class="section">
+    <section class="section section--tint">
       <div class="container">
 
         <div class="section-head">
