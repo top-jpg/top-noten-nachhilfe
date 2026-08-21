@@ -191,22 +191,45 @@
             unverbindlicher Einschätzung des Lernstands.
           </p>
 
-          <p
-            id="countdown"
-            style="
-              display:inline-flex;
-              align-items:center;
-              gap:8px;
-              margin:4px auto 0;
-              padding:8px 18px;
-              border-radius:999px;
-              background:rgba(242,153,74,0.12);
-              color:var(--orange);
-              font-weight:700;
-              font-size:0.95rem;
-            "
-            aria-live="polite"
-          ></p>
+          <div
+            id="countdown-wrap"
+            style="max-width:420px; margin:18px auto 24px;"
+          >
+            <p
+              id="countdown-label"
+              style="
+                margin:0 0 8px;
+                font-weight:700;
+                color:var(--orange);
+                font-size:0.95rem;
+              "
+              aria-live="polite"
+            ></p>
+
+            <div
+              style="
+                width:100%;
+                height:14px;
+                border-radius:999px;
+                background:rgba(242,153,74,0.15);
+                overflow:hidden;
+              "
+              role="progressbar"
+              aria-label="Verbleibende Zeit bis Aktionsende"
+              id="countdown-track"
+            >
+              <div
+                id="countdown-bar"
+                style="
+                  height:100%;
+                  width:100%;
+                  border-radius:999px;
+                  background:linear-gradient(90deg, #F2994A, #F2C94C);
+                  transition:width 0.6s ease;
+                "
+              ></div>
+            </div>
+          </div>
 
           <div class="cta-band__actions">
             <a class="btn btn-primary" href="kontakt.html">
@@ -229,19 +252,33 @@
 
     <script>
       (function () {
-        var el = document.getElementById('countdown');
-        if (!el) return;
+        var label = document.getElementById('countdown-label');
+        var bar = document.getElementById('countdown-bar');
+        var track = document.getElementById('countdown-track');
+        var wrap = document.getElementById('countdown-wrap');
+        if (!label || !bar) return;
+
+        var start = new Date('2026-08-01T00:00:00+02:00');
         var deadline = new Date('2026-09-15T23:59:59+02:00');
         var now = new Date();
-        var diffMs = deadline - now;
-        var days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 
-        if (days > 1) {
-          el.textContent = 'Noch ' + days + ' Tage bis Aktionsende';
-        } else if (days === 1) {
-          el.textContent = 'Nur noch heute: Aktion sichern';
+        var totalMs = deadline - start;
+        var remainingMs = deadline - now;
+        var days = Math.ceil(remainingMs / (1000 * 60 * 60 * 24));
+
+        if (remainingMs <= 0) {
+          wrap.style.display = 'none';
         } else {
-          el.style.display = 'none';
+          var percentRemaining = Math.max(0, Math.min(100, (remainingMs / totalMs) * 100));
+          bar.style.width = percentRemaining + '%';
+          track.setAttribute('aria-valuenow', String(days));
+          track.setAttribute('aria-valuemin', '0');
+
+          if (days > 1) {
+            label.textContent = 'Noch ' + days + ' Tage bis Aktionsende';
+          } else {
+            label.textContent = 'Nur noch heute: Aktion sichern';
+          }
         }
       })();
     </script>
