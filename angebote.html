@@ -36,6 +36,7 @@
 <li><a href="preise.html">Preise</a></li>
 <li><a href="ueber-uns.html">Über uns</a></li>
 <li><a href="standort.html">Standort</a></li>
+<li><a href="angebote.html" aria-current="page">Angebote</a></li>
 <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
@@ -68,6 +69,7 @@
 <a href="preise.html">Preise</a>
 <a href="ueber-uns.html">Über uns</a>
 <a href="standort.html">Standort</a>
+<a href="angebote.html">Angebote</a>
 <a href="kontakt.html">Kontakt</a>
       <a class="btn btn-primary btn-block" href="kontakt.html">Jetzt anfragen</a>
     </div>
@@ -83,14 +85,90 @@
     </section><section class="section">
       <div class="container container--narrow">
         <div class="card reveal text-center" style="padding:48px 32px;">
-          <div class="icon-wrap icon-wrap--lg" style="margin-inline:auto; margin-bottom:18px;"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v5.2M12 8v.1" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></div>
-          <h3>Aktuell läuft keine Aktion</h3>
-          <p style="margin-top:10px;">Derzeit gibt es keine aktiven Angebote. Kostenlose Probestunden für Neukund:innen bieten wir ausschließlich während gesonderter Aktionszeiträume an – sobald eine Aktion startet, wird sie hier angekündigt.</p>
-          <p style="margin-top:20px;">Bei Fragen zu aktuellen Konditionen melde dich gerne direkt bei uns.</p>
-          <a class="btn btn-primary" href="kontakt.html" style="margin-top:20px;">Jetzt anfragen <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="icon-wrap icon-wrap--lg" style="margin-inline:auto; margin-bottom:18px;"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M12 3.5 13.6 9l5.4 1.6-5.4 1.6L12 17.7l-1.6-5.5L5 10.6 10.4 9 12 3.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+          <h3>Kostenlose Probestunde</h3>
+          <p style="margin-top:10px;">Nur bis <strong>15. September 2026</strong>: Neukund:innen erhalten eine kostenlose Probestunde inklusive unverbindlicher Einschätzung des Lernstands.</p>
+
+          <div
+            id="countdown-wrap"
+            style="max-width:420px; margin:22px auto 0;"
+          >
+            <p
+              id="countdown-label"
+              style="
+                margin:0 0 8px;
+                font-weight:700;
+                color:var(--orange);
+                font-size:0.95rem;
+              "
+              aria-live="polite"
+            ></p>
+
+            <div
+              style="
+                width:100%;
+                height:14px;
+                border-radius:999px;
+                background:rgba(242,153,74,0.15);
+                overflow:hidden;
+              "
+              role="progressbar"
+              aria-label="Verbleibende Zeit bis Aktionsende"
+              id="countdown-track"
+            >
+              <div
+                id="countdown-bar"
+                style="
+                  height:100%;
+                  width:100%;
+                  border-radius:999px;
+                  background:linear-gradient(90deg, #F2994A, #F2C94C);
+                  transition:width 0.6s ease;
+                "
+              ></div>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:24px;">
+            <a class="btn btn-primary" href="kontakt.html">Kostenlose Probestunde anfragen <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn-whatsapp" href="https://wa.me/491788745639" target="_blank" rel="noopener">Per WhatsApp anfragen</a>
+          </div>
         </div>
       </div>
     </section>
+
+    <script>
+      (function () {
+        var label = document.getElementById('countdown-label');
+        var bar = document.getElementById('countdown-bar');
+        var track = document.getElementById('countdown-track');
+        var wrap = document.getElementById('countdown-wrap');
+        if (!label || !bar) return;
+
+        var start = new Date('2026-08-01T00:00:00+02:00');
+        var deadline = new Date('2026-09-15T23:59:59+02:00');
+        var now = new Date();
+
+        var totalMs = deadline - start;
+        var remainingMs = deadline - now;
+        var days = Math.ceil(remainingMs / (1000 * 60 * 60 * 24));
+
+        if (remainingMs <= 0) {
+          wrap.style.display = 'none';
+        } else {
+          var percentRemaining = Math.max(0, Math.min(100, (remainingMs / totalMs) * 100));
+          bar.style.width = percentRemaining + '%';
+          track.setAttribute('aria-valuenow', String(days));
+          track.setAttribute('aria-valuemin', '0');
+
+          if (days > 1) {
+            label.textContent = 'Noch ' + days + ' Tage bis Aktionsende';
+          } else {
+            label.textContent = 'Nur noch heute: Aktion sichern';
+          }
+        }
+      })();
+    </script>
   </main>
   <footer class="site-footer">
     <div class="container">
@@ -108,8 +186,8 @@
 <li><a href="preise.html">Preise</a></li>
 <li><a href="ueber-uns.html">Über uns</a></li>
 <li><a href="standort.html">Standort</a></li>
-<li><a href="kontakt.html">Kontakt</a></li>
 <li><a href="angebote.html">Angebote</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </div>
         <div class="footer-col">
