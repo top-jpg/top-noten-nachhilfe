@@ -180,6 +180,8 @@ p { color: var(--ink-soft); }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--navy); font-size: 1.15rem; letter-spacing: -0.01em; }
 .brand__mark { flex-shrink: 0; }
 .brand__name-2 { color: var(--teal); }
+.brand__logo { height: 42px; width: auto; display: block; }
+.brand__icon { height: 34px; width: 34px; flex-shrink: 0; display: block; }
 
 .nav-desktop { display: none; }
 .nav-desktop ul { display: flex; align-items: center; gap: 30px; }
